@@ -1,0 +1,45 @@
+# Xcode (from gitignore.io)
+build/
+Build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*/*.xcuserstate
+
+# Carthage
+Carthage/*
+!Carthage/Build
+Carthage/Build/*
+!Carthage/Build/iOS
+Carthage/Build/iOS/*
+!Carthage/Build/iOS/*.framework
+
+# R.swift
+*.generated.swift
+
+# Cuckoo
+GeneratedMocks.swift
+
+# Bundler, Generamba
+.bundle
+Gemfile.lock
+Rambafile
+Templates
+vendor
+
+# others
+*.swp
+!.gitkeep
+.DS_Store
