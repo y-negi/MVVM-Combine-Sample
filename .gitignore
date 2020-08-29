@@ -43,3 +43,6 @@ vendor
 *.swp
 !.gitkeep
 .DS_Store
+
+# Token
+AccessToken.text

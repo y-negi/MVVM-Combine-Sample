@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090AF0F924F9FC2B00CBA60A /* AccessToken.text in Resources */ = {isa = PBXBuildFile; fileRef = 090AF0F824F9FC2B00CBA60A /* AccessToken.text */; };
 		09D5A2EA24F9D8DE00E0B05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D5A2E924F9D8DE00E0B05D /* AppDelegate.swift */; };
 		09D5A2EC24F9D8DE00E0B05D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D5A2EB24F9D8DE00E0B05D /* SceneDelegate.swift */; };
 		09D5A2EE24F9D8DE00E0B05D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D5A2ED24F9D8DE00E0B05D /* ContentView.swift */; };
@@ -14,6 +15,9 @@
 		09D5A2F324F9D8E000E0B05D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D5A2F224F9D8E000E0B05D /* Preview Assets.xcassets */; };
 		09D5A2F624F9D8E000E0B05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D5A2F424F9D8E000E0B05D /* LaunchScreen.storyboard */; };
 		09D5A30124F9D8E000E0B05D /* MVVM_Combine_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D5A30024F9D8E000E0B05D /* MVVM_Combine_SampleTests.swift */; };
+		09D5A31C24F9F7A400E0B05D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 09D5A31B24F9F7A400E0B05D /* Moya */; };
+		09D5A31E24F9F7A400E0B05D /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 09D5A31D24F9F7A400E0B05D /* CombineMoya */; };
+		09D5A32024F9F86D00E0B05D /* QiitaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D5A31F24F9F86D00E0B05D /* QiitaAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090AF0F824F9FC2B00CBA60A /* AccessToken.text */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AccessToken.text; sourceTree = "<group>"; };
 		09D5A2E624F9D8DE00E0B05D /* MVVM-Combine-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Combine-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D5A2E924F9D8DE00E0B05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D5A2EB24F9D8DE00E0B05D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		09D5A2FC24F9D8E000E0B05D /* MVVM-Combine-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-Combine-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D5A30024F9D8E000E0B05D /* MVVM_Combine_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Combine_SampleTests.swift; sourceTree = "<group>"; };
 		09D5A30224F9D8E000E0B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09D5A31F24F9F86D00E0B05D /* QiitaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D5A31E24F9F7A400E0B05D /* CombineMoya in Frameworks */,
+				09D5A31C24F9F7A400E0B05D /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090AF0F724F9FC0C00CBA60A /* AccessToken */ = {
+			isa = PBXGroup;
+			children = (
+				090AF0F824F9FC2B00CBA60A /* AccessToken.text */,
+			);
+			path = AccessToken;
+			sourceTree = "<group>";
+		};
 		09D5A2DD24F9D8DE00E0B05D = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +125,8 @@
 				09D5A2E924F9D8DE00E0B05D /* AppDelegate.swift */,
 				09D5A2EB24F9D8DE00E0B05D /* SceneDelegate.swift */,
 				09D5A2ED24F9D8DE00E0B05D /* ContentView.swift */,
+				09D5A31024F9DBA900E0B05D /* Model */,
+				09D5A32124F9FA9700E0B05D /* Module */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -116,6 +134,7 @@
 		09D5A30C24F9D8F200E0B05D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				090AF0F724F9FC0C00CBA60A /* AccessToken */,
 				09D5A2F124F9D8E000E0B05D /* Preview Content */,
 				09D5A2EF24F9D8E000E0B05D /* Assets.xcassets */,
 				09D5A2F424F9D8E000E0B05D /* LaunchScreen.storyboard */,
@@ -129,6 +148,37 @@
 				09D5A2F724F9D8E000E0B05D /* Info.plist */,
 			);
 			path = SupportingFile;
+			sourceTree = "<group>";
+		};
+		09D5A31024F9DBA900E0B05D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09D5A31124F9DBB400E0B05D /* API */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09D5A31124F9DBB400E0B05D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				09D5A31F24F9F86D00E0B05D /* QiitaAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		09D5A32124F9FA9700E0B05D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				09D5A32224F9FAA100E0B05D /* ItemList */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		09D5A32224F9FAA100E0B05D /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ItemList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +197,10 @@
 			dependencies = (
 			);
 			name = "MVVM-Combine-Sample";
+			packageProductDependencies = (
+				09D5A31B24F9F7A400E0B05D /* Moya */,
+				09D5A31D24F9F7A400E0B05D /* CombineMoya */,
+			);
 			productName = "MVVM-Combine-Sample";
 			productReference = 09D5A2E624F9D8DE00E0B05D /* MVVM-Combine-Sample.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 09D5A2DD24F9D8DE00E0B05D;
+			packageReferences = (
+				09D5A31A24F9F7A400E0B05D /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 09D5A2E724F9D8DE00E0B05D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,6 +271,7 @@
 			files = (
 				09D5A2F624F9D8E000E0B05D /* LaunchScreen.storyboard in Resources */,
 				09D5A2F324F9D8E000E0B05D /* Preview Assets.xcassets in Resources */,
+				090AF0F924F9FC2B00CBA60A /* AccessToken.text in Resources */,
 				09D5A2F024F9D8E000E0B05D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +293,7 @@
 				09D5A2EA24F9D8DE00E0B05D /* AppDelegate.swift in Sources */,
 				09D5A2EC24F9D8DE00E0B05D /* SceneDelegate.swift in Sources */,
 				09D5A2EE24F9D8DE00E0B05D /* ContentView.swift in Sources */,
+				09D5A32024F9F86D00E0B05D /* QiitaAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +552,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		09D5A31A24F9F7A400E0B05D /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = exactVersion;
+				version = "15.0.0-alpha.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09D5A31B24F9F7A400E0B05D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09D5A31A24F9F7A400E0B05D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		09D5A31D24F9F7A400E0B05D /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09D5A31A24F9F7A400E0B05D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09D5A2DE24F9D8DE00E0B05D /* Project object */;
 }
