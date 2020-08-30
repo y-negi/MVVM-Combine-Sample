@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftUI
-import Moya
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -29,17 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
-        }
-
-        // TODO: test
-        let p = MoyaProvider<QiitaAPI>()
-        p.request(.items) { (result) in
-            switch result {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                print(error)
-            }
         }
     }
 
