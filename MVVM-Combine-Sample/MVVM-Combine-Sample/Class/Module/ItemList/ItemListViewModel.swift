@@ -11,7 +11,13 @@ import Combine
 
 final class ItemListViewModel: ObservableObject {
 
+    enum EventType {
+        case loading
+        case alert
+    }
+
     @Published var items: [Item] = []
+    @Published var alertElement = AlertElement()
 
     private let qiitaRepository: QiitaRepository
 
@@ -30,7 +36,10 @@ final class ItemListViewModel: ObservableObject {
         self.qiitaRepository.fetchItems()
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
-                    print("ERROR:\(error)")
+                    self.alertElement.toShow(title: "ERROR",
+                                             message: error.localizedDescription,
+                                             primaryButton: .default(title: "Retry", action: self.bodyWillAppear),
+                                             secondaryButton: .cancel())
                 }
             }, receiveValue: { [weak self] response in
                 guard let self = self else { return }

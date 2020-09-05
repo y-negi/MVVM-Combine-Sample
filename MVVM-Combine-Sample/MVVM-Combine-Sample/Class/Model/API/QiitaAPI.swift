@@ -33,7 +33,9 @@ extension QiitaAPI {
 
     var sampleData: Data {
         switch self {
-        case .items: return Data()
+        case .items:
+            let path = Bundle.main.path(forResource: "QiitaAPIItemsStub", ofType: "json")!
+            return try! Data(contentsOf: URL(fileURLWithPath: path))
         }
     }
 

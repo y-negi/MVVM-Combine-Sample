@@ -13,6 +13,12 @@ struct Item: Identifiable {
     let title: String
     let userImageURL: URL?
 
+    init(id: String, title: String, userImageURL: URL?) {
+        self.id = id
+        self.title = title
+        self.userImageURL = userImageURL
+    }
+
     init(response: ItemsResponse) {
         self.id = response.id
         self.title = response.title
