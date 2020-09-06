@@ -17,6 +17,10 @@ struct ItemListRow: View {
 
     var body: some View {
         HStack {
+            Image(systemName: "star.fill")
+                .frame(width: 40, height: 40)
+                .cornerRadius(20)
+
             Text(self.item.title)
                 .bold()
         }
