@@ -9,7 +9,11 @@
 import SwiftUI
 
 struct ItemListRow: View {
-    var item: Item
+    private let item: Item
+
+    init(item: Item) {
+        self.item = item
+    }
 
     var body: some View {
         HStack {

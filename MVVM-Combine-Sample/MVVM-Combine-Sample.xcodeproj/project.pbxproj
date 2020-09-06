@@ -26,6 +26,8 @@
 		09DA2A7525030C12002C8523 /* AlertElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7425030C12002C8523 /* AlertElement.swift */; };
 		09DA2A77250311DF002C8523 /* ItemListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A76250311DF002C8523 /* ItemListRow.swift */; };
 		09DA2A7A25031309002C8523 /* Alert+AlertElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7925031309002C8523 /* Alert+AlertElement.swift */; };
+		09DA2A7D250474F1002C8523 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */; };
+		09DA2A7F25047C5A002C8523 /* View+IsHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		09DA2A7425030C12002C8523 /* AlertElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertElement.swift; sourceTree = "<group>"; };
 		09DA2A76250311DF002C8523 /* ItemListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListRow.swift; sourceTree = "<group>"; };
 		09DA2A7925031309002C8523 /* Alert+AlertElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+AlertElement.swift"; sourceTree = "<group>"; };
+		09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+IsHidden.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 		09D5A32124F9FA9700E0B05D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				09DA2A7B250474DD002C8523 /* Common */,
 				09D5A32224F9FAA100E0B05D /* ItemList */,
 			);
 			path = Module;
@@ -241,8 +246,17 @@
 			isa = PBXGroup;
 			children = (
 				09DA2A7925031309002C8523 /* Alert+AlertElement.swift */,
+				09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		09DA2A7B250474DD002C8523 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +372,9 @@
 				09DA2A7A25031309002C8523 /* Alert+AlertElement.swift in Sources */,
 				090AF0FC24FB38C600CBA60A /* ItemListView.swift in Sources */,
 				099BCBC024FB4EB600F6CE48 /* Item.swift in Sources */,
+				09DA2A7D250474F1002C8523 /* LoadingIndicatorView.swift in Sources */,
 				090AF0FE24FB398400CBA60A /* ItemListViewModel.swift in Sources */,
+				09DA2A7F25047C5A002C8523 /* View+IsHidden.swift in Sources */,
 				09D5A2EA24F9D8DE00E0B05D /* AppDelegate.swift in Sources */,
 				09DA2A77250311DF002C8523 /* ItemListRow.swift in Sources */,
 				090AF10024FB44F500CBA60A /* QiitaRepository.swift in Sources */,

@@ -11,13 +11,9 @@ import Combine
 
 final class ItemListViewModel: ObservableObject {
 
-    enum EventType {
-        case loading
-        case alert
-    }
-
     @Published var items: [Item] = []
     @Published var alertElement = AlertElement()
+    @Published var isLoading = false
 
     private let qiitaRepository: QiitaRepository
 
@@ -33,8 +29,14 @@ final class ItemListViewModel: ObservableObject {
 
     /// 画面表示時
     func bodyWillAppear() {
+        self.isLoading = true
+
         self.qiitaRepository.fetchItems()
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
+                guard let self = self else { return }
+
+                self.isLoading = false
+
                 if case .failure(let error) = completion {
                     self.alertElement.toShow(title: "ERROR",
                                              message: error.localizedDescription,
@@ -43,6 +45,9 @@ final class ItemListViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] response in
                 guard let self = self else { return }
+
+                self.isLoading = false
+
                 self.items = response.map { Item(response: $0) }
             })
             .store(in: &self.cancellables)

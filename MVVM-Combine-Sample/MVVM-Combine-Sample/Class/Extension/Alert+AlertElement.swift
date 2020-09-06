@@ -10,6 +10,8 @@ import SwiftUI
 
 extension Alert {
 
+    /// AlertElementを利用してinitialize
+    /// - Parameter alertElement: AlertElement
     init(alertElement: AlertElement) {
         let toButton = { (type: AlertElement.AlertButtonType) -> Alert.Button in
             switch type {

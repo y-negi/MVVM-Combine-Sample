@@ -23,16 +23,20 @@ struct ItemListView: View {
     }
 
     var body: some View {
-        NavigationView {
-            List(self.viewModel.items) { item in
-                ItemListRow(item: item)
+        ZStack {
+            NavigationView {
+                List(self.viewModel.items) { item in
+                    ItemListRow(item: item)
+                }
+                .navigationBarTitle("記事一覧")
             }
-            .navigationBarTitle("記事一覧")
+            .alert(isPresented: self.$viewModel.alertElement.isShow) {
+                Alert(alertElement: self.viewModel.alertElement)
+            }
+
+            LoadingIndicatorView(isLoading: self.viewModel.isLoading)
         }
         .onAppear(perform: self.viewModel.bodyWillAppear)
-        .alert(isPresented: self.$viewModel.alertElement.isShow) {
-            Alert(alertElement: self.viewModel.alertElement)
-        }
     }
 }
 
