@@ -11,13 +11,18 @@ import SwiftUI
 struct ItemListRow: View {
     private let item: Item
 
+    @ObservedObject private var container: ImageContainer
+
     init(item: Item) {
         self.item = item
+        
+        self.container = ImageContainer(for: item.userImageURL)
     }
 
     var body: some View {
         HStack {
-            Image(systemName: "star.fill")
+            Image(uiImage: self.container.image)
+                .resizable()
                 .frame(width: 40, height: 40)
                 .cornerRadius(20)
 

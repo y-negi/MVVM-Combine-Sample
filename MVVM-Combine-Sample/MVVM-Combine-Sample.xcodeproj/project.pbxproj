@@ -28,6 +28,7 @@
 		09DA2A7A25031309002C8523 /* Alert+AlertElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7925031309002C8523 /* Alert+AlertElement.swift */; };
 		09DA2A7D250474F1002C8523 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */; };
 		09DA2A7F25047C5A002C8523 /* View+IsHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */; };
+		09E161EC250D8E3400B52965 /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E161EB250D8E3400B52965 /* ImageContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		09DA2A7925031309002C8523 /* Alert+AlertElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+AlertElement.swift"; sourceTree = "<group>"; };
 		09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+IsHidden.swift"; sourceTree = "<group>"; };
+		09E161EB250D8E3400B52965 /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				099BCBBE24FB4EAD00F6CE48 /* Entity */,
 				09D5A31124F9DBB400E0B05D /* API */,
 				090AF10124FB44F900CBA60A /* Repository */,
+				09E161EB250D8E3400B52965 /* ImageContainer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				09D5A32024F9F86D00E0B05D /* QiitaAPI.swift in Sources */,
 				099BCBBD24FB479D00F6CE48 /* ItemsResponse.swift in Sources */,
 				09DA2A7525030C12002C8523 /* AlertElement.swift in Sources */,
+				09E161EC250D8E3400B52965 /* ImageContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
