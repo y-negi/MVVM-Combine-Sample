@@ -9,7 +9,7 @@
 import Foundation
 
 struct ItemsResponse: Decodable {
-    struct User: Codable, Identifiable {
+    struct User: Decodable {
         let descriptionField : String?
         let facebookId : String?
         let followeesCount : Int?
@@ -28,7 +28,7 @@ struct ItemsResponse: Decodable {
         let websiteUrl : String?
     }
     
-    struct Tag : Codable {
+    struct Tag : Decodable {
         let name : String?
         let versions : [String]?
     }

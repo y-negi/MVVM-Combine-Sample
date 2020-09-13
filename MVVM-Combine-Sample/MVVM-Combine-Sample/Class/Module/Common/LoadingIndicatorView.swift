@@ -21,9 +21,9 @@ struct LoadingIndicatorView: View {
         GeometryReader { geometry in
             ZStack {
                 Color(.black)
-                    .opacity(0.01)
-                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .opacity(0.1)
                     .edgesIgnoringSafeArea(.all)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .disabled(true)
                 Circle()
                     .trim(from: 0, to: 0.6)

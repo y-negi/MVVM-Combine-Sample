@@ -26,18 +26,23 @@ final class QiitaRepository {
     // MARK: - Public Func
 
     /// 記事一覧を取得
-    /// - Returns: 記事一覧 or エラー
-    func fetchItems() -> Future<[ItemsResponse], Error> {
+    /// - Parameters:
+    ///   - page: ページ
+    ///   - perPage: 1ページの取得数
+    /// - Returns: Future<記事一覧, エラー>
+    func fetchItems(page: Int, perPage: Int) -> Future<[ItemsResponse], Error> {
         Future<[ItemsResponse], Error> { promise in
             self.provider
-                .requestPublisher(.items)
-                .map([ItemsResponse].self)
+                .requestPublisher(.items(page: page, perPage: perPage))
+                .map([ItemsResponse].self, using: JSONDecoder(keyDecodingStrategy: .convertFromSnakeCase))
                 .sink(receiveCompletion: { completion in
                     if case .failure(let error) = completion {
+                        print("QiitaAPI.fetchItems Failed!\n\(error.localizedDescription)")
                         promise(.failure(error))
                     }
                 },
                       receiveValue: { response in
+                        print("QiitaAPI.fetchItems Success!\n\(response)")
                         promise(.success(response))
                 })
                 .store(in: &self.cancellables)

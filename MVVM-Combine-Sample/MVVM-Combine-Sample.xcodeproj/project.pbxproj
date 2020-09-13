@@ -29,6 +29,7 @@
 		09DA2A7D250474F1002C8523 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */; };
 		09DA2A7F25047C5A002C8523 /* View+IsHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */; };
 		09E161EC250D8E3400B52965 /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E161EB250D8E3400B52965 /* ImageContainer.swift */; };
+		09E161EE250DA27300B52965 /* JSONDecoder+KeyDecodingStrategyInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E161ED250DA27300B52965 /* JSONDecoder+KeyDecodingStrategyInit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+IsHidden.swift"; sourceTree = "<group>"; };
 		09E161EB250D8E3400B52965 /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
+		09E161ED250DA27300B52965 /* JSONDecoder+KeyDecodingStrategyInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+KeyDecodingStrategyInit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,8 +250,8 @@
 		09DA2A78250312D7002C8523 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				09DA2A7925031309002C8523 /* Alert+AlertElement.swift */,
-				09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */,
+				09E161F0250DA2D000B52965 /* Foundation */,
+				09E161EF250DA2C600B52965 /* UI */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -260,6 +262,23 @@
 				09DA2A7C250474F1002C8523 /* LoadingIndicatorView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		09E161EF250DA2C600B52965 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				09DA2A7925031309002C8523 /* Alert+AlertElement.swift */,
+				09DA2A7E25047C5A002C8523 /* View+IsHidden.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		09E161F0250DA2D000B52965 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				09E161ED250DA27300B52965 /* JSONDecoder+KeyDecodingStrategyInit.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +402,7 @@
 				090AF10024FB44F500CBA60A /* QiitaRepository.swift in Sources */,
 				09D5A2EC24F9D8DE00E0B05D /* SceneDelegate.swift in Sources */,
 				09D5A32024F9F86D00E0B05D /* QiitaAPI.swift in Sources */,
+				09E161EE250DA27300B52965 /* JSONDecoder+KeyDecodingStrategyInit.swift in Sources */,
 				099BCBBD24FB479D00F6CE48 /* ItemsResponse.swift in Sources */,
 				09DA2A7525030C12002C8523 /* AlertElement.swift in Sources */,
 				09E161EC250D8E3400B52965 /* ImageContainer.swift in Sources */,

@@ -27,6 +27,9 @@ struct ItemListView: View {
             NavigationView {
                 List(self.viewModel.items) { item in
                     ItemListRow(item: item)
+                        .onAppear {
+                            self.viewModel.rowWillAppear(item: item)
+                    }
                 }
                 .navigationBarTitle("記事一覧")
             }

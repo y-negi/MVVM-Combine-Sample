@@ -17,7 +17,10 @@ final class ItemListViewModel: ObservableObject {
 
     private let qiitaRepository: QiitaRepository
 
+    private let itemsPerPage = 20
+
     private var cancellables: Set<AnyCancellable> = []
+    private var currentPage = 1
 
     // MARK: - Init
 
@@ -29,9 +32,31 @@ final class ItemListViewModel: ObservableObject {
 
     /// 画面表示時
     func bodyWillAppear() {
+        if self.items.isEmpty {
+            self.fetchItems()
+        }
+    }
+
+    /// 行表示時
+    /// - Parameter item: 表示された記事
+    func rowWillAppear(item: Item) {
+        if self.items.last == item, !self.isLoading {
+            self.currentPage += 1
+            self.fetchItems()
+        }
+    }
+
+}
+
+// MARK: - Private Func
+
+private extension ItemListViewModel {
+
+    /// 記事一覧を取得
+    func fetchItems() {
         self.isLoading = true
 
-        self.qiitaRepository.fetchItems()
+        self.qiitaRepository.fetchItems(page: self.currentPage, perPage: self.itemsPerPage)
             .sink(receiveCompletion: { [weak self] completion in
                 guard let self = self else { return }
 
@@ -43,12 +68,17 @@ final class ItemListViewModel: ObservableObject {
                                              primaryButton: .default(title: "Retry", action: self.bodyWillAppear),
                                              secondaryButton: .cancel())
                 }
-            }, receiveValue: { [weak self] response in
-                guard let self = self else { return }
+                },
+                  receiveValue: { [weak self] response in
+                    guard let self = self else { return }
 
-                self.isLoading = false
+                    self.isLoading = false
 
-                self.items = response.map { Item(response: $0) }
+                    let responseItems = response.map { Item(response: $0) }
+                    let notIncludedItems = responseItems.filter { item -> Bool in
+                        !self.items.contains(where: { $0.id == item.id })
+                    }
+                    self.items.append(contentsOf: notIncludedItems)
             })
             .store(in: &self.cancellables)
     }

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum QiitaAPI: TargetType {
-    case items
+    case items(page: Int, perPage: Int)
 }
 
 extension QiitaAPI {
@@ -41,8 +41,13 @@ extension QiitaAPI {
 
     var task: Task {
         switch self {
-        case .items:
-            return .requestPlain
+        case .items(let page, let perPage):
+            let parameters = [
+                "page": page,
+                "per_page": perPage
+            ]
+
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
 
